@@ -63,8 +63,8 @@ h1 {
 }
 
 .profile-pic {
-  border-radius: 50%;
-  max-width: 60px;
+  border-radius: 100%;
+  max-width: 100px;
 }
 
 .profile-pic-default {
@@ -91,10 +91,12 @@ h1 {
 
 .post__image {
   margin-bottom: 16px;
+
 }
 
 .post__image img {
   width: 100%;
+
 }
 
 .likes {

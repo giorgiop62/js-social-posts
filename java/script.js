@@ -1,4 +1,4 @@
-const container = document.querySelector('.container');
+const list = document.querySelector('.posts-list');
 
 const posts = [
   {
@@ -91,7 +91,7 @@ posts.forEach(elem =>{
   </div>            
 </div>
 `
-})
+});
 
 
 
