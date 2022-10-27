@@ -58,6 +58,9 @@ const posts = [
   }
 ];
 
+
+
+
 posts.forEach(elem =>{
   console.log(elem);
   container.innerHTML += `<div class="post">
@@ -68,7 +71,7 @@ posts.forEach(elem =>{
           </div>
           <div class="post-meta__data">
               <div class="post-meta__author">${elem.name}Phil Mangione</div>
-              <div class="post-meta__time">${elem.created}-4 mesi fa</div>
+              <div class="post-meta__time">${reverseData(elem.created)} -4 mesi fa</div>
           </div>                    
       </div>
   </div>
@@ -93,15 +96,19 @@ posts.forEach(elem =>{
 `
 });
 
-//formattazione della data:
-const d = new Date();
-let clock;
+//formattazione data
+function reverseData (dataDaFormattare){
 
-let giorno = d.getDate();
-let mese = d.getMonth() + 1;
-const anno = d.getFullYear();
+  let parti = dataDaFormattare.split('-');
 
-clock = `${giorno} / ${mese} / ${anno}`;
+  return parti[2] + '-' + parti[1] + '-' + parti[0];
+}
+
+
+
+/* bonus
+Se clicchiamo sul tasto “Mi Piace” cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo.
+Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.*/
 
 
 
