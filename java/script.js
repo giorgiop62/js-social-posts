@@ -1,4 +1,4 @@
-const list = document.querySelector('.posts-list');
+const list = document.querySelector('.post');
 
 const posts = [
   {
@@ -61,23 +61,22 @@ const posts = [
 
 
 
-posts.forEach(elem =>{
-  console.log(elem);
-  container.innerHTML += `<div class="post">
+posts.forEach(elem => {
+  list.innerHTML += `<div class="post">
   <div class="post__header">
       <div class="post-meta">                    
           <div class="post-meta__icon">
-              <img class="profile-pic" src="${elem.media}" alt="">                    
+              <img class="profile-pic" src="${elem.media}" alt="${elem.author.name}">                    
           </div>
           <div class="post-meta__data">
-              <div class="post-meta__author">${elem.name}Phil Mangione</div>
-              <div class="post-meta__time">${reverseData(elem.created)} -4 mesi fa</div>
+              <div class="post-meta__author">${elem.author.name}Phil Mangione</div>
+              <div class="post-meta__time">${reverseData(elem.created)} 4 mesi fa</div>
           </div>                    
       </div>
   </div>
   <div class="post__text">${elem.content}Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
   <div class="post__image">
-      <img src="${elem.image}" alt="">
+      <img src="${elem.author.image}" alt="">
   </div>
   <div class="post__footer">
       <div class="likes js-likes">
@@ -109,6 +108,8 @@ function reverseData (dataDaFormattare){
 /* bonus
 Se clicchiamo sul tasto “Mi Piace” cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo.
 Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.*/
+
+
 
 
 
