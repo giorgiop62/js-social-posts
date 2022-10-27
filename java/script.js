@@ -68,7 +68,7 @@ posts.forEach(elem =>{
           </div>
           <div class="post-meta__data">
               <div class="post-meta__author">${elem.name}Phil Mangione</div>
-              <div class="post-meta__time">${elem.created}4 mesi fa</div>
+              <div class="post-meta__time">${elem.created}-4 mesi fa</div>
           </div>                    
       </div>
   </div>
@@ -92,6 +92,21 @@ posts.forEach(elem =>{
 </div>
 `
 });
+
+//formattazione della data:
+const d = new Date();
+let clock;
+
+let giorno = d.getDate();
+let mese = d.getMonth() + 1;
+const anno = d.getFullYear();
+
+clock = `${giorno} / ${mese} / ${anno}`;
+
+
+
+
+
 
 
 
